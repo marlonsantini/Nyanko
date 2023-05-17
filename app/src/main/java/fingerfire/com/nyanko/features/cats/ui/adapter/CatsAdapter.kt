@@ -11,7 +11,6 @@ class CatsAdapter(
     private var catList: List<CatResponse> = emptyList()
 ) : RecyclerView.Adapter<CatsAdapter.CatViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatViewHolder {
         return CatViewHolder(
             ItemCatBinding
@@ -31,11 +30,5 @@ class CatsAdapter(
         return catList.size
     }
 
-    fun updateList(cats: List<CatResponse>) {
-        this.catList = cats
-        notifyDataSetChanged()
-    }
-
     class CatViewHolder(val binding: ItemCatBinding) : RecyclerView.ViewHolder(binding.root)
-
 }
